@@ -91,11 +91,17 @@ The header pins coming off the board go into the back of a 4", 480x480 Guition s
 --------------------------
 ```
 
-I do NOT solder to the Guition screen. I use header pins, especially for the 5V as I disconnect that when I need to program the RP2040.
+I do NOT solder to the Guition screen. I use header pins, especially for the 5V as I disconnect that when I need to program the RP2040. Note that at runtime no USB connection to the PC is needed if you supply power from the Guition screen. I've never tried, but I wouldn't connect to the PC and to the screen power at the same time. It should be ok, but I wouldn't risk it.
 
 ## Why This Exists
 
 The parallel displays I use don't have enough GPIO pins readily available to support the LED power button and the rotary encoder+pushbutton that the G5 has. So this was a quick and easy way to enable the controls using what I had on hand. Originally I had the RP2040 processing MobiFlight I/O, but that caused more problems with dropped messages and lag.
+
+## Parts list
+EC11 encoder with push button (2). I have a lot of different types in the parts drawer, but I generally like short-D shaft ones. Just search AliExpress for 'ec11' and you'll see tons of options.
+LED momentary NO push button (2). I use the black ones with a LED lighted ring around them. Search AliExpress for 1NO pushbutton LED and you'll find them in different colors and sizes. I use 12mm black w/ white LED.
+Rp2040 aka Raspberry Pi Pico. These things are like $1-2 on AliExpress. search 'rp2040'
+Wire. I use small guage silicon wire.
 
 ## Images
 
